@@ -1,13 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Frontend</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <app-root></app-root>
+    <header>
+        <div class="header-content">
+            <a href="">
+                <img class="mainpg" src="Go_Learn.png" alt="Go_Learn">
+            </a>
+            <div class="header-icons">
+                <img class="menu_logo" src="menu_logo.png" alt="Menu">
+                <a href="">
+                    <img class="analytics_logo" src="analytics_logo.png" alt="Analytics">
+                </a>
+                
+            </div>
+        </div>
+        <div id="menuPanel">
+            <button>Dashboard</button>
+            <button>Goals</button>
+            <button>Invites</button>
+            <button>Leaderboard</button>
+            <button>Challenges</button>
+            <button>Mood & Wallet</button>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Go_Learn</h1>
+    </main>
+
+    <footer>
+        <!-- TOP CENTER TEXT -->
+        <div class="footer-top">
+            <h3>🌟 Join the Quest!</h3>
+            <p>
+                Track your goals, share progress, and conquer challenges with friends.<br>
+                ⚡ Turn daily tasks into epic wins!
+            </p>
+        </div>
+
+        <!-- 3 COLUMN SECTION -->
+        <div class="footer-details">
+            <!-- LEFT -->
+            <div>
+                <strong><span class="color_red">|</span> Contact Us</strong><br>
+                📩vallabhunisaiprasad5@gmail.com<br>
+                📩yashwanthbevara0@gmail.com
+            </div>
+
+            <!-- CENTER -->
+            <div>
+                <strong><span class="color_red">|</span> Quick Links</strong><br>
+                <a href=""><button>Home</button></a>
+                <a href=""><button>Features</button></a>
+                <a href=""><button>FAQs</button></a>
+                <a href=""><button>Contact us</button></a>
+            </div>
+
+            <!-- RIGHT -->
+            <div>
+                <strong><span class="color_red">|</span> Follow Us</strong><br>
+                <a href="https://www.linkedin.com/in/sai-prasad-0026b8357/?originalSubdomain=in">
+                    <img src="https://cdn-icons-png.freepik.com/256/174/174857.png">
+                </a>
+            </div>
+        </div>
+
+        <!-- LEGAL CENTER -->
+        <div class="footer-legal">
+            <a href=""> Terms of Service </a>
+            <a href=""> | Privacy Policy </a>
+            <a href=""> | Legal </a>
+        </div>
+    </footer>
+
+    <script>
+        let menuBtn = document.querySelector(".menu_logo");
+        let menuPanel = document.getElementById("menuPanel");
+        
+        menuBtn.addEventListener("click", function() {
+            menuPanel.classList.toggle("show");
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isMenuBtn = event.target.closest('.menu_logo');
+            const isMenuPanel = event.target.closest('#menuPanel');
+            
+            if (!isMenuBtn && !isMenuPanel && menuPanel.classList.contains('show')) {
+                menuPanel.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
