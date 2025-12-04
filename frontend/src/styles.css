@@ -1,1 +1,217 @@
-/* You can add global styles to this file, and also import other style files */
+/* MENU PANEL STYLING */
+        #menuPanel {
+            display: none;
+            background: #040339;
+            padding: 20px;
+            width: 100%;
+            color: white;
+            flex-direction: column;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        #menuPanel.show {
+            display: flex;
+            align-items: center;
+        }
+        
+        #menuPanel button {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            margin: 5px 0;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        #menuPanel button:hover {
+            background: white;
+            color: #040339;
+            transform: scale(1.05);
+        }
+        
+        /* HEADER STYLING */
+        header {
+            background: #040339;
+            color: white;
+            padding: 25px 3px 25px 10px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 90px;
+            width: 100%;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .mainpg {
+            height: 40px;
+            width: 40px;
+        }
+        
+        .menu_logo {
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .analytics_logo {
+            height: 40px;
+            width: 40px;
+            margin-left: 10px;
+        }
+        
+        .login {
+            height: 40px;
+            width: 60px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+        
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* MAIN CONTENT */
+        main {
+            padding: 20px;
+            min-height: 400px;
+        }
+        
+        /* FOOTER STYLING */
+        footer {
+            background: #040339;
+            color: white;
+            padding: 50px 20px 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* TOP TEXT */
+        .footer-top {
+            text-align: center;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+        
+        /* 3 COLUMN LAYOUT */
+        .footer-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: auto;
+            gap: 40px;
+        }
+        
+        .footer-details div {
+            width: 30%;
+            line-height: 1.8;
+        }
+        
+        /* BUTTON STYLE */
+        .footer-details button {
+            display: block;
+            margin: 6px 0;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        /* ICON */
+        .footer-details img {
+            width: 35px;
+            margin-top: 10px;
+        }
+        
+        /* LEGAL CENTER ALIGN */
+        .footer-legal {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 14px;
+            color: #faf0f0;
+            background-color: #040339;
+        }
+        
+        .color_red {
+            color: red;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .footer-details {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .footer-details div {
+                width: 100%;
+            }
+            
+            .footer-details a {
+                display: block;
+            }
+            
+            .footer-details button {
+                margin: 8px auto;
+            }
+            
+            /* Menu panel responsive */
+            #menuPanel button {
+                width: 90%;
+                max-width: 250px;
+                padding: 12px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                height: 80px;
+                padding: 15px 10px;
+            }
+            
+            .mainpg,
+            .menu_logo,
+            .analytics_logo {
+                height: 30px;
+                width: 30px;
+            }
+            
+            .login {
+                height: 30px;
+                width: 50px;
+                font-size: 14px;
+            }
+            
+            #menuPanel {
+                top: 80px;
+                padding: 15px;
+            }
+        }
